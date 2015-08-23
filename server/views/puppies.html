@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+
+    <h1>{{ title }}</h1>
+
+    <form method="post" id="add-puppy"  action="/submit">
+    Name
+    <br>
+    <input name="name" id = "name">
+    <br>
+    <br>
+    ID
+    <br>
+    <input name="id" id = "id">
+    <br>
+    <br>
+    <input type="submit" value = "Create Puppy">
+    </form>
+
+  </div>
+
+{% endblock %}
