@@ -8,27 +8,30 @@
   <div class="container">
 
     <h1>{{ title }}</h1>
-    <p class="green">The puppy was saved successfully</p>
+    <p class="green">The person was added successfully</p>
     <br>
     <br>
     <table  class='table table-striped table-bordered'>
       <tr>
         <th>Name</th>
-        <th>ID</th>
+        <th>Hobby</th>
       </tr>
 
 
-      {% for puppy in puppyArray %}
+      {% for peep in peopleArray %}
       <tr>
-      <td>{{puppy.name}}</td>
-      <td>{{puppy.id}}</td>
+      <td>{{peep.name}}</td>
+      <td>{{peep.hobby}}</td>
       </tr>
       {% endfor %}
 
-  <form method="post" action="/addPup">
-    <input type="submit" value = "Add Another Puppy">
+ <form method="post" action="/addPeep">
+    <input type="submit" value = "Add Another Person">
   </form>
 
   </div>
-{% endblock %}
 
+
+
+
+{% endblock %}
