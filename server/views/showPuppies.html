@@ -17,22 +17,23 @@
         <th>ID</th>
       </tr>
 
-
       {% for puppy in puppyArray %}
       <tr>
       <td>{{puppy.name}}</td>
       <td>{{puppy.id}}</td>
       </tr>
+    </table>
       {% endfor %}
 
-  <form method="post" action="/addPup">
-    <input type="submit" value = "Add Another Puppy">
-  </form>
-  <br>
-  <br>
-  <form method="post" action="/home">
+    <form method="post" action="/addPup">
+      <input type="submit" value = "Add Another Puppy">
+    </form>
+    <br>
+
+    <form method="post" action="/home">
       <input type="submit" value = "Home">
     </form>
+    <br>
 
   </div>
 {% endblock %}

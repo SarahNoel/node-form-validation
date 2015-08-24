@@ -23,16 +23,19 @@
       <td>{{peep.name}}</td>
       <td>{{peep.hobby}}</td>
       </tr>
-      {% endfor %}
+    </table>
+    {% endfor %}
 
- <form method="post" action="/addPeep">
-    <input type="submit" value = "Add Another Person">
-  </form>
-<br>
-<br>
-<form method="post" action="/home">
-    <input type="submit" value = "Home">
-  </form>
+
+    <form method="post" action="/addPeep">
+      <input type="submit" value = "Add Another Person">
+    </form>
+    <br>
+
+    <form method="post" action="/home">
+      <input type="submit" value = "Home">
+    </form>
+    <br>
 
   </div>
 
