@@ -11,7 +11,7 @@ var idErr = "ID cannot be blank";
 var idNumErr = "An ID must be at least 3 characters long";
 
 router.get('/', function(req, res, next) {
-  res.redirect('/puppy/new');
+  res.render('index')
 });
 
 router.get('/puppy/new', function(req, res, next) {
@@ -27,14 +27,19 @@ router.post('/submit', function(req, res, next) {
   var name = req.body.name;
   var id = req.body.id;
   errArray = [];
+
   if(id === ""){
     errArray.push(idErr);
+
   }if(name === ""){
     errArray.push(nameErr);
+
   }if(id.length < 3){
     errArray.push(idNumErr);
+
   }if(errArray.length > 0){
   res.redirect('/puppy/new');
+
   }else{
   puppyArray.push({name: name, id: id});
   errArray = [];
@@ -57,12 +62,16 @@ router.post('/submit2', function(req, res, next) {
   var name = req.body.name;
   var hobby = req.body.hobby;
   errArray = [];
+
   if(name === ""){
     errArray.push(nameErr);
+
   }if(hobby === ""){
     errArray.push(hobbyErr);
+
   }if(errArray.length>0){
     res.redirect('/people/new');
+
   }else{
   peopleArray.push({name: name, hobby: hobby});
   res.redirect('/people');}
@@ -77,5 +86,8 @@ router.post('/addPeep', function(req, res) {
   res.redirect('/people/new');
 });
 
+router.post('/home', function(req, res){
+  res.redirect('/');
+})
 
 module.exports = router;

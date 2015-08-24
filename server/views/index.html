@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+
+    <h1>Let's Add Some Stuff!</h1>
+
+    <br>
+
+    <form method="post" action="/addPup">
+        <input type="submit" value = "Add a Puppy">
+    </form>
+
+    <br>
+    <br>
+
+    <form method="post" action="/addPeep">
+        <input type="submit" value = "Add a Person">
+    </form>
+
+
+  </div>
+
+{% endblock %}
